@@ -11,6 +11,8 @@
 	background-color: var(--branco);
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	position: relative;	/* Libera a opção par colocar outros atributos como top, left etc */
 }
 
 .container {
@@ -20,4 +22,14 @@
 
 .container__imagem {
 	padding: 1em;
+}
+
+.lista-menu {
+	display: none; /* Remove a exibição da Lista do Menu ( sem ocupar espaço ) */
+	position: absolute;	/* Permite movimentar o elemento de acordo com outro que veio antes */
+	top: 100%;
+}
+
+.container__botao:checked ~ .lista-menu {
+	display: block;
 }
