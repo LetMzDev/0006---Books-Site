@@ -28,8 +28,29 @@
 	display: none; /* Remove a exibição da Lista do Menu ( sem ocupar espaço ) */
 	position: absolute;	/* Permite movimentar o elemento de acordo com outro que veio antes */
 	top: 100%;
+	width: 60vw;
 }
 
 .container__botao:checked ~ .lista-menu {
 	display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+	padding: 1em;
+	background-color: var(--branco);
+}
+
+.lista-menu__titulo {
+	color: var(--laranja);
+}
+
+.lista-menu__link {
+	/* Fonte gradiente */
+	background: var(--azul-degrade);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+
+	text-transform: uppercase;
 }
