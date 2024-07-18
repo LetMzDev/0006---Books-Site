@@ -59,3 +59,26 @@
 .container__botao {
 	display: none; /* Remove o display do checked */
 }
+
+/* Mobile First*/
+
+.container__titulo {
+	display: none;	/* "1" Remove o conteúdo em telas menores */
+}
+
+@media screen and (min-width: 1024px) { /* Aplicará >= 1024px*/
+	.container__titulo,
+	.container__titulo--negrito {
+		font-family: var(--fonte-secundaria);
+		font-size: 30px;
+	}
+
+	.container__titulo {
+		font-weight: 400;
+		display: block;	/* Exibe o conteúdo removido em "1" */
+	}
+
+	.container__titulo--negrito {
+		font-weight: 700;
+	}
+}
