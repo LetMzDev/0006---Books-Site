@@ -107,4 +107,13 @@
 	.cabeçalho__menu-hamburger {
 		display: none;
 	}
+
+	.opções__botão {
+		display: none; /* Remove o display do checked */
+	}
+
+	.opções__botão:checked ~ .lista-menu {
+		display: block;
+		width: auto;
+	}
 }
