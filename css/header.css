@@ -7,6 +7,19 @@
 	display: inline-block;	/* Permite 'mexer' na altura e largura o inline-block*/
 }
 
+/* 
+	O combinador '~' procura um outro elemento que esteja em seguida dele que tenha a classe, ou seja procurou o elemento
+	'container__rotulo' que estava depois do container__botao:checked
+	O combinador '>' procura algo que esteja dentro deste elemento
+*/
+.container__botao:checked ~ .container__rotulo > .cabeçalho__menu-hamburger {
+	background-image: url("../img/Menu Aberto.svg");
+}
+
+.container__botao:checked ~ .container__rotulo {
+	background: var(--azul-degrade);
+}
+
 .cabeçalho {
 	background-color: var(--branco);
 	display: flex;
